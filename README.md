@@ -1,5 +1,5 @@
 # AWS-MGN-Server-Migration
-# 🚀 Production-Grade Server Migration using AWS Application Migration Service (AWS MGN)
+# Production-Grade Server Migration using AWS Application Migration Service (AWS MGN)
 
 ## 📌 Project Overview
 
