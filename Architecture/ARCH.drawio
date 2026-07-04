@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="awsmgn" name="Page-1">
+    <mxGraphModel dx="2060" dy="1054" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=24;fontStyle=1;rounded=0;" value="&lt;font style=&quot;color: rgb(26, 26, 26); font-size: 30px; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;AWS MGN Server Migration Architecture&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="900" x="655" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="on" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;align=center;" value="On-Premises / Other Cloud" vertex="1">
+          <mxGeometry height="520" width="260" x="135" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="src" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1976D2;fontSize=16;" value="Source Server&#xa;VM / EC2&#xa;10 GiB" vertex="1">
+          <mxGeometry height="110" width="180" x="175" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="agent" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=16;" value="AWS Replication Agent" vertex="1">
+          <mxGeometry height="100" width="180" x="175" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="aws" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#424242;strokeWidth=2;fontSize=18;" value="AWS Cloud" vertex="1">
+          <mxGeometry height="610" width="980" x="455" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vpc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F1F8E9;strokeColor=#43A047;strokeWidth=2;" value="Amazon VPC" vertex="1">
+          <mxGeometry height="530" width="930" x="480" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="mgn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#8E24AA;strokeWidth=2;fontSize=18;" value="" vertex="1">
+          <mxGeometry height="275" width="560" x="515" y="182.5" as="geometry" />
+        </mxCell>
+        <mxCell id="rep" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E53935;fontSize=15;" value="Replication Server&#xa;EC2&#xa;Sync Data" vertex="1">
+          <mxGeometry height="150" width="120" x="555" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="conv" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FB8C00;fontSize=15;" value="Conversion Server&#xa;EC2&#xa;Convert" vertex="1">
+          <mxGeometry height="150" width="120" x="735" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="test" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#43A047;fontSize=15;" value="Test / Cutover&#xa;EC2&#xa;Launch &amp; Test" vertex="1">
+          <mxGeometry height="150" width="120" x="915" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="target" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;dashed=1;fontSize=17;align=center;" value="" vertex="1">
+          <mxGeometry height="410" width="230" x="1135" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="asg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Auto Scaling Group&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="170" x="1165" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="alb" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Application Load Balancer&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="170" x="1165" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="rds" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;R53&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="170" x="1165" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-5" edge="1" parent="1" source="obs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1584.666666666667" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F9A825;fontSize=16;" value="Monitoring &amp; Observability&#xa;CloudWatch&#xa;CloudTrail&#xa;SNS&#xa;Athena" vertex="1">
+          <mxGeometry height="220" width="220" x="1475" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="net" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#E57373;fontSize=16;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Networking&lt;br&gt;VPC&lt;br&gt;Direct Connect / VPN Gateway&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="440" x="715" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="sec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#66BB6A;fontSize=16;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Security, Backup &amp;amp; Operations&lt;br&gt;IAM | KMS | Backup | S3 | Systems Manager | Secrets Manager | GuardDuty&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="820" x="525" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="rep" style="rounded=0;" target="conv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="conv" style="rounded=0;" target="test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="asg" style="rounded=0;" target="alb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="alb" style="rounded=0;" target="rds">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-3" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.sharpArrow2;dy1=0.67;dx1=18;dx2=18;dy3=0.15;dx3=27;notch=0;rotation=-90;rounded=0;" value="" vertex="1">
+          <mxGeometry height="60" width="190" x="170" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-4" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.sharpArrow2;dy1=0.67;dx1=18;dx2=18;dy3=0.15;dx3=27;notch=0;rounded=0;" value="" vertex="1">
+          <mxGeometry height="60" width="110" x="1365" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-6" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;shadow=0;rounded=0;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Amazon Athena&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="155" x="1507.5" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-9" edge="1" parent="1" source="aws" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="aws">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-23" edge="1" parent="1" source="pea9buwRYEVnW9i9ajTA-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="asg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-13" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;rounded=0;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;EC2 / Cutover Instance&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="80" x="1210" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-21" parent="1" style="html=1;shadow=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.sharpArrow2;dy1=0.67;dx1=18;dx2=18;dy3=0.15;dx3=27;notch=0;rounded=0;" value="" vertex="1">
+          <mxGeometry height="60" width="170" x="1035" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-26" edge="1" parent="1" source="rds" style="curved=1;endArrow=classicThin;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endFill=1;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1455" y="790" />
+            </Array>
+            <mxPoint x="1575" y="820" as="sourcePoint" />
+            <mxPoint x="1495" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-27" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.013;entryY=0.666;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" target="rep" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="500" />
+              <mxPoint x="335" y="500" />
+              <mxPoint x="405" y="500" />
+              <mxPoint x="435" y="490" />
+              <mxPoint x="445" y="450" />
+              <mxPoint x="445" y="380" />
+              <mxPoint x="435" y="310" />
+            </Array>
+            <mxPoint x="395" y="500" as="sourcePoint" />
+            <mxPoint x="445" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-28" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" value="" vertex="1">
+          <mxGeometry height="330" width="410" x="1410" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-31" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" value="" vertex="1">
+          <mxGeometry height="60" width="100" x="1585" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Public Network&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="1555" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="pea9buwRYEVnW9i9ajTA-37" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;rounded=0;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="1605" y="860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
